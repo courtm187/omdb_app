@@ -1,0 +1,8 @@
+<ul ng-repeat="movie in mc.movies | orderBy : $index : true">
+  <!-- {{movie | json}} -->
+  <li><a href="/partials/movies.html" ng-click='getMovie(movie.imdbID)'><img ng-src="{{movie.Poster}}"></a></li>
+  <li><h3>{{movie.Title}}</h3></li>
+  <li><h4>Critics' Rating: {{movie.imdbRating}}</h4></li>
+  <li>&nbsp;</li>
+  <li>&nbsp;</li>
+</ul>

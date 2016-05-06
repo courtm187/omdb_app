@@ -1,0 +1,15 @@
+button {
+  background-color: blue;
+}
+
+.container {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  display: block;
+}

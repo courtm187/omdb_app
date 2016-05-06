@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="omdb">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+  integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="routes.js"></script>
+    <script src="movie.factory.js"></script>
+    <script src="main.ctrl.js"></script>
+  </head>
+  <body ng-controller="MainCtrl">
+
+  <div class="container">
+    <div class="row">
+      <h2>Angular OMDB API Search</h2>
+      <h4>Enter a movie by title.</h4>
+    </div>
+    <div class="row">
+      <form ng-submit="getMovie()">
+        <input type="text" ng-model="mc.movie" placeholder="Type some stuff"><br><br>
+        <button type="submit" class="btn btn-lg btn-primary">
+          Search! <span class="glyphicon glyphicon-arrow-right"></span>
+        </button>
+      </form>
+    </div>
+    <hr>
+    <div class="row">
+      <ng-view></ng-view>
+    </div>
+  </div>
+
+</body>
+</html>
